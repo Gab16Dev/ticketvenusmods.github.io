@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Sistema de Tickets Discord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Sistema de Tickets Discord</h1>
+            <p class="subtitle">Crie sua conta para começar</p>
+        </header>
+
+        <main class="main-content">
+            <div class="auth-section">
+                <div class="auth-container">
+                    <div class="auth-header">
+                        <h2>Criar Conta</h2>
+                        <p>Preencha os dados abaixo para se registrar</p>
+                    </div>
+
+                    <form class="auth-form" id="registerForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="discordId">ID do Discord *</label>
+                            <input type="text" id="discordId" name="discordId" required placeholder="123456789012345678">
+                            <small class="field-help">Você pode encontrar seu ID do Discord nas configurações do aplicativo</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Senha *</label>
+                            <input type="password" id="password" name="password" required placeholder="Mínimo 6 caracteres">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmar Senha *</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Digite a senha novamente">
+                        </div>
+
+                        <div class="error-message" id="registerError"></div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary full-width">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="8.5" cy="7" r="4"></circle>
+                                    <path d="M20 8v6M23 11h-6"></path>
+                                </svg>
+                                Criar Conta
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="auth-links">
+                        <p>Já tem uma conta? <a href="login.html" class="auth-link">Faça login aqui</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Sistema de Tickets Discord. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

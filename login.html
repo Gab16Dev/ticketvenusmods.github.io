@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema de Tickets Discord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Sistema de Tickets Discord</h1>
+            <p class="subtitle">Faça login para acessar o sistema</p>
+        </header>
+
+        <main class="main-content">
+            <div class="auth-section">
+                <div class="auth-container">
+                    <div class="auth-header">
+                        <h2>Fazer Login</h2>
+                        <p>Digite suas credenciais para acessar sua conta</p>
+                    </div>
+
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+                        </div>
+
+                        <div class="error-message" id="loginError"></div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary full-width">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M21 12H9"></path>
+                                </svg>
+                                Entrar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="auth-links">
+                        <p>Não tem uma conta? <a href="register.html" class="auth-link">Registre-se aqui</a></p>
+                        <p>É administrador? <a href="admin.html" class="auth-link">Acesso admin</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Sistema de Tickets Discord. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -26,22 +26,32 @@
                     </button>
                 </div>
                 
-                <div class="features">
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Resposta Rápida</h3>
-                        <p>Nossa equipe responde em até 24 horas</p>
+                <div class="user-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">📋</div>
+                        <div class="stat-content">
+                            <h3 id="userTotalTickets">0</h3>
+                            <p>Total de Tickets</p>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Seguro</h3>
-                        <p>Suas informações são mantidas em segurança</p>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏳</div>
+                        <div class="stat-content">
+                            <h3 id="userPendingTickets">0</h3>
+                            <p>Pendentes</p>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📱</div>
-                        <h3>Responsivo</h3>
-                        <p>Acesse de qualquer dispositivo</p>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-content">
+                            <h3 id="userResolvedTickets">0</h3>
+                            <p>Resolvidos</p>
+                        </div>
                     </div>
+                </div>
+
+                <div id="userTicketsContainer" class="user-tickets-section">
+                    <!-- User tickets will be loaded here -->
                 </div>
             </div>
 
@@ -117,10 +127,14 @@
 
         <footer class="footer">
             <p>&copy; 2025 Sistema de Tickets Discord. Todos os direitos reservados.</p>
-            <a href="admin.html" class="admin-link">Painel Administrativo</a>
+            <div class="footer-links">
+                <a href="admin.html" class="admin-link">Painel Administrativo</a>
+                <button class="logout-btn btn btn-secondary">Sair</button>
+            </div>
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
