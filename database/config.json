@@ -1,0 +1,19 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "1234"
+  },
+  "system": {
+    "sessionTimeout": 86400000,
+    "maxTicketMessages": 100,
+    "allowUserRegistration": true
+  },
+  "colors": {
+    "primary": "#5865f2",
+    "secondary": "#99aab5",
+    "success": "#57f287",
+    "warning": "#fee75c",
+    "danger": "#ed4245",
+    "background": "#36393f"
+  }
+}
