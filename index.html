@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tickets Discord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Sistema de Tickets Discord</h1>
+            <p class="subtitle">Sistema completo de suporte e atendimento</p>
+        </header>
+
+        <main class="main-content">
+            <div class="home-section" id="homeSection">
+                <div class="hero">
+                    <h2>Precisa de ajuda?</h2>
+                    <p>Abra um ticket e nossa equipe irá te ajudar o mais rápido possível!</p>
+                    <button class="btn btn-primary" id="openTicketBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"></path>
+                        </svg>
+                        Abrir Ticket
+                    </button>
+                </div>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Resposta Rápida</h3>
+                        <p>Nossa equipe responde em até 24 horas</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Seguro</h3>
+                        <p>Suas informações são mantidas em segurança</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsivo</h3>
+                        <p>Acesse de qualquer dispositivo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ticket-form-section hidden" id="ticketFormSection">
+                <div class="form-container">
+                    <div class="form-header">
+                        <button class="btn btn-secondary back-btn" id="backBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                            </svg>
+                            Voltar
+                        </button>
+                        <h2>Abrir Novo Ticket</h2>
+                    </div>
+
+                    <form class="ticket-form" id="ticketForm">
+                        <div class="form-group">
+                            <label for="userName">Nome do Usuário *</label>
+                            <input type="text" id="userName" name="userName" required>
+                            <div class="error-message" id="userNameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="discordId">ID do Discord *</label>
+                            <input type="text" id="discordId" name="discordId" required placeholder="Exemplo: 123456789012345678">
+                            <div class="error-message" id="discordIdError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ticketReason">Motivo do Ticket *</label>
+                            <select id="ticketReason" name="ticketReason" required>
+                                <option value="">Selecione um motivo...</option>
+                                <option value="suporte-tecnico">Suporte Técnico</option>
+                                <option value="bug-report">Reportar Bug</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="ban-appeal">Apelação de Ban</option>
+                                <option value="denuncia">Denúncia</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                            <div class="error-message" id="ticketReasonError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Descrição *</label>
+                            <textarea id="description" name="description" required placeholder="Descreva detalhadamente seu problema ou solicitação..." rows="6"></textarea>
+                            <div class="error-message" id="descriptionError"></div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="cancelBtn">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                Enviar Ticket
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="success-section hidden" id="successSection">
+                <div class="success-message">
+                    <div class="success-icon">✅</div>
+                    <h2>Ticket Enviado com Sucesso!</h2>
+                    <p>Seu ticket foi criado e nossa equipe irá analisá-lo em breve.</p>
+                    <p><strong>ID do Ticket:</strong> <span id="ticketId"></span></p>
+                    <button class="btn btn-primary" id="newTicketBtn">Abrir Novo Ticket</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Sistema de Tickets Discord. Todos os direitos reservados.</p>
+            <a href="admin.html" class="admin-link">Painel Administrativo</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
